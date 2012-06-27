@@ -10,7 +10,7 @@ func LocationByZonename(zonename string) (l *time.Location) {
 		l = time.UTC
 		return
 	}
-	l = time.FixedZone(z.Name, z.Offset)
+	l = time.FixedZone(z.Name, z.Offset*60*60)
 	return
 }
 
